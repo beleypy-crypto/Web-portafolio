@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from './Header.astro';
 import Hero from './Hero.astro';
 import FeaturedProject from './FeaturedProject.astro';
+import Services from './Services.astro';
 import Skills from './Skills.astro';
 import Certificates from './Certificates.astro';
 import About from './About.astro';
@@ -23,6 +24,7 @@ const { t } = Astro.props;
     <main>
       <Hero t={t} />
       <FeaturedProject t={t} />
+      <Services t={t} />
       <Skills t={t} />
       <Certificates t={t} />
       <About t={t} />

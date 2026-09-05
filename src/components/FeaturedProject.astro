@@ -1,5 +1,6 @@
 ---
 import type { Dictionary } from '../i18n/es';
+import { site } from '../data/site';
 import SectionHeader from './SectionHeader.astro';
 
 interface Props {
@@ -7,13 +8,14 @@ interface Props {
 }
 
 const { t } = Astro.props;
+const demoUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(t.contact.demoMessage)}`;
 ---
 
 <section id="project" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
   <SectionHeader eyebrow={t.project.eyebrow} title={t.project.title} subtitle={t.project.subtitle} />
 
   <div class="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-    <article class="glass rounded-[2rem] p-6 sm:p-8">
+    <article class="glass card-hover rounded-[2rem] p-6 sm:p-8">
       <div class="grid gap-5">
         <div>
           <h3 class="text-sm font-bold uppercase tracking-[0.22em] text-cyan-300">{t.project.problemLabel}</h3>
@@ -30,7 +32,7 @@ const { t } = Astro.props;
       </div>
     </article>
 
-    <article class="glass rounded-[2rem] p-6 sm:p-8">
+    <article class="glass card-hover rounded-[2rem] p-6 sm:p-8">
       <h3 class="text-sm font-bold uppercase tracking-[0.22em] text-cyan-300">{t.project.flowTitle}</h3>
       <ol class="mt-6 grid gap-4">
         {t.project.flow.map((step, index) => (
@@ -48,6 +50,13 @@ const { t } = Astro.props;
         {t.project.stack.map((tech) => (
           <span class="pill rounded-full px-4 py-2 text-xs font-semibold">{tech}</span>
         ))}
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-amber-300/15 bg-amber-400/10 p-4">
+        <p class="text-sm leading-7 text-amber-100">{t.project.demoNote}</p>
+        <a href={demoUrl} target="_blank" rel="noreferrer" class="btn-primary mt-4 inline-flex rounded-xl px-4 py-2.5 text-sm font-bold transition hover:-translate-y-0.5">
+          {t.hero.demoCta}
+        </a>
       </div>
     </article>
   </div>

@@ -10,6 +10,7 @@ export const en: Dictionary = {
   nav: {
     about: 'About',
     project: 'Project',
+    services: 'Services',
     skills: 'Skills',
     certificates: 'Certificates',
     contact: 'Contact',
@@ -24,6 +25,7 @@ export const en: Dictionary = {
     primaryCta: 'View featured project',
     secondaryCta: 'Chat on WhatsApp',
     cvCta: 'Download CV',
+    demoCta: 'Book a demo',
     highlights: [
       'AI applied to real processes',
       'Backend with Python and FastAPI',
@@ -31,16 +33,17 @@ export const en: Dictionary = {
     ],
     agent: {
       title: 'Scheduling agent',
-      status: 'Online',
+      status: 'Visual demo',
+      demoTag: 'Conceptual flow preview',
       inputPlaceholder: 'Schedule a call for Friday at 10 am...',
-      response: 'Perfect. I checked availability and scheduled the call.',
+      response: 'This is how the agent would respond after checking availability and confirming a time.',
     },
   },
   project: {
     eyebrow: 'Featured project',
     title: 'AI scheduling agent',
     subtitle:
-      'A conversational agent that automates appointment scheduling by combining conversational AI with the Cal.com API.',
+      'Conversational agent concept designed to automate appointment scheduling with Python, FastAPI, LangGraph and the Cal.com API.',
     problemLabel: 'Problem',
     problem:
       'Manual scheduling processes consume time, create friction and depend on repetitive responses.',
@@ -52,6 +55,7 @@ export const en: Dictionary = {
       'Practical automation with a clear backend architecture, conversational logic and service exposure through FastAPI.',
     stackTitle: 'Stack',
     flowTitle: 'General flow',
+    demoNote: 'The visual demo shows the concept. To see a functional demo, message me and we can coordinate a call.',
     flow: [
       'The user writes a request through the conversational channel.',
       'LangGraph controls state, intent and the flow steps.',
@@ -59,6 +63,40 @@ export const en: Dictionary = {
       'The Cal.com API v2 allows the agenda to be queried and managed.',
     ],
     stack: ['Python', 'FastAPI', 'LangGraph', 'LangChain', 'Cal.com API v2', 'Automation'],
+  },
+  services: {
+    eyebrow: 'Services',
+    title: 'What I can build for you',
+    subtitle:
+      'Solutions focused on saving time, automating repetitive tasks and creating useful digital products.',
+    cta: 'Talk on WhatsApp',
+    messagePrefix: 'Hi Beley, I am interested in: ',
+    processTitle: 'How I work',
+    items: [
+      {
+        title: 'AI agents for processes',
+        description:
+          'I design conversational agents to answer, schedule, capture clients or guide users through a clear flow.',
+        bullets: ['Conversational flows', 'API integrations', 'LangGraph logic'],
+      },
+      {
+        title: 'Process automation',
+        description:
+          'I identify repetitive tasks and turn them into automated flows to reduce manual work and errors.',
+        bullets: ['Process mapping', 'Workflows', 'No-code/low-code automation'],
+      },
+      {
+        title: 'Backend and APIs with Python',
+        description:
+          'I build clean and scalable backend services to expose business logic and external integrations.',
+        bullets: ['FastAPI', 'REST APIs', 'External integrations'],
+      },
+    ],
+    process: [
+      'I understand your current process and what you want to improve.',
+      'I propose a simple, useful and scalable solution.',
+      'I build a first functional version and we iterate from there.',
+    ],
   },
   skills: {
     eyebrow: 'Skills',
@@ -124,9 +162,10 @@ export const en: Dictionary = {
     topic: 'Topic',
     message: 'Message',
     submit: 'Send via WhatsApp',
-    topics: ['AI project', 'Automation', 'Backend/API', 'Other'],
+    topics: ['AI project', 'Automation', 'Backend/API', 'Book a demo', 'Other'],
     defaultMessage:
       'Hi Beley, I saw your portfolio and I want to talk about a project.',
+    demoMessage: 'Hi Beley, I want to book a demo about your scheduling agent or AI automation.',
     note: 'You can also download my CV to review my experience and training.',
     emailLabel: 'Email',
     phoneLabel: 'WhatsApp',

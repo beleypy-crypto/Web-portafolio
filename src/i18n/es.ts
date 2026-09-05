@@ -8,6 +8,7 @@ export const es = {
   nav: {
     about: 'Sobre mí',
     project: 'Proyecto',
+    services: 'Servicios',
     skills: 'Habilidades',
     certificates: 'Certificados',
     contact: 'Contacto',
@@ -22,6 +23,7 @@ export const es = {
     primaryCta: 'Ver proyecto destacado',
     secondaryCta: 'Hablar por WhatsApp',
     cvCta: 'Descargar CV',
+    demoCta: 'Agendar demo',
     highlights: [
       'IA aplicada a procesos reales',
       'Backend con Python y FastAPI',
@@ -29,16 +31,17 @@ export const es = {
     ],
     agent: {
       title: 'Agente de agendamiento',
-      status: 'En línea',
+      status: 'Demo visual',
+      demoTag: 'Vista conceptual del flujo',
       inputPlaceholder: 'Agenda una llamada el viernes a las 10 am...',
-      response: 'Perfecto. Verifiqué disponibilidad y dejé agendada la llamada.',
+      response: 'Así respondería el agente después de consultar la disponibilidad y confirmar el horario.',
     },
   },
   project: {
     eyebrow: 'Proyecto destacado',
     title: 'Agente de agendamiento con IA',
     subtitle:
-      'Agente conversacional que automatiza la agenda de citas integrando IA conversacional con la API de Cal.com.',
+      'Agente conversacional pensado para automatizar el agendamiento de citas usando Python, FastAPI, LangGraph y la API de Cal.com.',
     problemLabel: 'Problema',
     problem:
       'Los procesos manuales de agendamiento consumen tiempo, generan fricción y dependen de respuestas repetitivas.',
@@ -50,6 +53,7 @@ export const es = {
       'Automatización práctica con arquitectura backend clara, lógica conversacional y exposición de servicios mediante FastAPI.',
     stackTitle: 'Stack',
     flowTitle: 'Flujo general',
+    demoNote: 'La demo visual muestra el concepto. Para ver una demo funcional, escríbeme y coordinamos una llamada.',
     flow: [
       'El usuario escribe una solicitud desde el canal conversacional.',
       'LangGraph controla el estado, la intención y los pasos del flujo.',
@@ -57,6 +61,40 @@ export const es = {
       'La API de Cal.com v2 permite consultar y gestionar la agenda.',
     ],
     stack: ['Python', 'FastAPI', 'LangGraph', 'LangChain', 'Cal.com API v2', 'Automatización'],
+  },
+  services: {
+    eyebrow: 'Servicios',
+    title: 'Qué puedo construir para ti',
+    subtitle:
+      'Soluciones enfocadas en ahorrar tiempo, automatizar tareas repetitivas y crear productos digitales útiles.',
+    cta: 'Hablar por WhatsApp',
+    messagePrefix: 'Hola Beley, me interesa: ',
+    processTitle: 'Cómo trabajo',
+    items: [
+      {
+        title: 'Agentes de IA para procesos',
+        description:
+          'Diseño agentes conversacionales para responder, agendar, captar clientes o guiar usuarios dentro de un flujo claro.',
+        bullets: ['Flujos conversacionales', 'Integración con APIs', 'Lógica con LangGraph'],
+      },
+      {
+        title: 'Automatización de procesos',
+        description:
+          'Detecto tareas repetitivas y las convierto en flujos automáticos para reducir trabajo manual y errores.',
+        bullets: ['Mapeo de procesos', 'Workflows', 'Automatización no-code/low-code'],
+      },
+      {
+        title: 'Backend y APIs con Python',
+        description:
+          'Desarrollo servicios backend limpios y escalables para exponer lógica de negocio e integraciones externas.',
+        bullets: ['FastAPI', 'APIs REST', 'Integraciones externas'],
+      },
+    ],
+    process: [
+      'Entiendo tu proceso actual y qué quieres mejorar.',
+      'Propongo una solución simple, útil y escalable.',
+      'Construyo una primera versión funcional y la ajustamos.',
+    ],
   },
   skills: {
     eyebrow: 'Habilidades',
@@ -122,9 +160,10 @@ export const es = {
     topic: 'Tema',
     message: 'Mensaje',
     submit: 'Enviar por WhatsApp',
-    topics: ['Proyecto con IA', 'Automatización', 'Backend/API', 'Otro'],
+    topics: ['Proyecto con IA', 'Automatización', 'Backend/API', 'Agendar demo', 'Otro'],
     defaultMessage:
       'Hola Beley, vi tu portafolio y quiero hablar sobre un proyecto.',
+    demoMessage: 'Hola Beley, quiero agendar una demo sobre tu agente de agendamiento o automatización con IA.',
     note: 'También puedes descargar mi CV para revisar mi experiencia y formación.',
     emailLabel: 'Email',
     phoneLabel: 'WhatsApp',
