@@ -16,6 +16,8 @@ export const en: Dictionary = {
   },
   hero: {
     eyebrow: 'Professional portfolio',
+    badge: 'Available for projects',
+    location: 'Colombia · Remote',
     title: 'I build solutions with AI, automation and scalable backends.',
     description:
       'Developer focused on creating efficient products: AI-powered applications, conversational agents, API integrations and automated processes.',
@@ -27,6 +29,12 @@ export const en: Dictionary = {
       'Backend with Python and FastAPI',
       'External API integrations',
     ],
+    agent: {
+      title: 'Scheduling agent',
+      status: 'Online',
+      inputPlaceholder: 'Schedule a call for Friday at 10 am...',
+      response: 'Perfect. I checked availability and scheduled the call.',
+    },
   },
   project: {
     eyebrow: 'Featured project',

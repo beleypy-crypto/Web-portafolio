@@ -14,6 +14,8 @@ export const es = {
   },
   hero: {
     eyebrow: 'Portafolio profesional',
+    badge: 'Disponible para proyectos',
+    location: 'Colombia · Remoto',
     title: 'Construyo soluciones con IA, automatización y backends escalables.',
     description:
       'Desarrollador enfocado en crear productos eficientes: aplicaciones potenciadas con IA, agentes conversacionales, integraciones con APIs y procesos automatizados.',
@@ -25,6 +27,12 @@ export const es = {
       'Backend con Python y FastAPI',
       'Integración con APIs externas',
     ],
+    agent: {
+      title: 'Agente de agendamiento',
+      status: 'En línea',
+      inputPlaceholder: 'Agenda una llamada el viernes a las 10 am...',
+      response: 'Perfecto. Verifiqué disponibilidad y dejé agendada la llamada.',
+    },
   },
   project: {
     eyebrow: 'Proyecto destacado',
