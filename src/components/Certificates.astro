@@ -1,0 +1,81 @@
+---
+import { certificates } from '../data/certificates';
+import type { Dictionary } from '../i18n/es';
+import SectionHeader from './SectionHeader.astro';
+
+interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
+const formatter = new Intl.DateTimeFormat(t.lang, {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<section id="certificates" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+  <SectionHeader eyebrow={t.certificates.eyebrow} title={t.certificates.title} subtitle={t.certificates.subtitle} />
+
+  <div class="mt-12 grid gap-6 md:grid-cols-2">
+    {certificates.map((certificate) => (
+      <article class="img-card overflow-hidden rounded-[2rem]">
+        {certificate.image ? (
+          <img
+            src={certificate.image}
+            alt={certificate.title}
+            class="h-64 w-full object-cover"
+            loading="lazy"
+          />
+        ) : (
+          <div class="flex h-64 items-center justify-center bg-gradient-to-br from-cyan-400/15 to-violet-400/15 p-8 text-center">
+            <div>
+              <p class="text-sm font-black uppercase tracking-[0.24em] text-cyan-200">PDF</p>
+              <p class="mt-3 text-2xl font-black text-white">{certificate.issuer}</p>
+            </div>
+          </div>
+        )}
+
+        <div class="p-6">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-black text-white">{certificate.title}</h3>
+              <p class="mt-2 text-sm text-slate-300">{certificate.issuer}</p>
+            </div>
+            <span class="pill rounded-full px-3 py-1 text-xs font-semibold">
+              {formatter.format(new Date(`${certificate.date}T12:00:00`))}
+            </span>
+          </div>
+
+          {certificate.credentialId && (
+            <p class="mt-4 text-sm text-slate-400">
+              {t.certificates.credentialLabel}: <span class="font-semibold text-slate-200">{certificate.credentialId}</span>
+            </p>
+          )}
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href={certificate.image ?? certificate.file}
+              target="_blank"
+              rel="noreferrer"
+              class="btn-secondary rounded-xl px-4 py-2.5 text-sm font-bold transition hover:border-cyan-300/40"
+            >
+              {t.certificates.view}
+            </a>
+            {certificate.verifyUrl && (
+              <a
+                href={certificate.verifyUrl}
+                target="_blank"
+                rel="noreferrer"
+                class="btn-secondary rounded-xl px-4 py-2.5 text-sm font-bold transition hover:border-violet-300/40"
+              >
+                {t.certificates.verify}
+              </a>
+            )}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

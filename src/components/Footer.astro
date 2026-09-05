@@ -1,0 +1,19 @@
+---
+import type { Dictionary } from '../i18n/es';
+
+interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/10 px-4 py-10 sm:px-6 lg:px-8">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+    <p>© {year} Beley Gómez Urdaneta. {t.footer.built}</p>
+    <a href="#top" class="font-semibold text-cyan-300 transition hover:text-cyan-200">
+      {t.footer.backToTop}
+    </a>
+  </div>
+</footer>

@@ -1,0 +1,33 @@
+---
+import type { Dictionary } from '../i18n/es';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Hero from './Hero.astro';
+import FeaturedProject from './FeaturedProject.astro';
+import Skills from './Skills.astro';
+import Certificates from './Certificates.astro';
+import About from './About.astro';
+import Contact from './Contact.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
+---
+
+<BaseLayout title={t.meta.title} description={t.meta.description} lang={t.lang}>
+  <div id="top">
+    <Header t={t} />
+    <main>
+      <Hero t={t} />
+      <FeaturedProject t={t} />
+      <Skills t={t} />
+      <Certificates t={t} />
+      <About t={t} />
+      <Contact t={t} />
+    </main>
+    <Footer t={t} />
+  </div>
+</BaseLayout>
