@@ -18,6 +18,7 @@ export const es = {
     badge: 'Disponible para proyectos',
     location: 'Colombia · Remoto',
     title: 'Construyo soluciones con IA, automatización y backends escalables.',
+    photoAlt: 'Foto de perfil de Beley Gómez Urdaneta',
     description:
       'Desarrollador enfocado en crear productos eficientes: aplicaciones potenciadas con IA, agentes conversacionales, integraciones con APIs y procesos automatizados.',
     primaryCta: 'Ver proyecto destacado',
@@ -29,13 +30,6 @@ export const es = {
       'Backend con Python y FastAPI',
       'Integración con APIs externas',
     ],
-    agent: {
-      title: 'Agente de agendamiento',
-      status: 'Demo visual',
-      demoTag: 'Vista conceptual del flujo',
-      inputPlaceholder: 'Agenda una llamada el viernes a las 10 am...',
-      response: 'Así respondería el agente después de consultar la disponibilidad y confirmar el horario.',
-    },
   },
   project: {
     eyebrow: 'Proyecto destacado',

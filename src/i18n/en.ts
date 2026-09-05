@@ -20,6 +20,7 @@ export const en: Dictionary = {
     badge: 'Available for projects',
     location: 'Colombia · Remote',
     title: 'I build solutions with AI, automation and scalable backends.',
+    photoAlt: 'Profile photo of Beley Gómez Urdaneta',
     description:
       'Developer focused on creating efficient products: AI-powered applications, conversational agents, API integrations and automated processes.',
     primaryCta: 'View featured project',
@@ -31,13 +32,6 @@ export const en: Dictionary = {
       'Backend with Python and FastAPI',
       'External API integrations',
     ],
-    agent: {
-      title: 'Scheduling agent',
-      status: 'Visual demo',
-      demoTag: 'Conceptual flow preview',
-      inputPlaceholder: 'Schedule a call for Friday at 10 am...',
-      response: 'This is how the agent would respond after checking availability and confirming a time.',
-    },
   },
   project: {
     eyebrow: 'Featured project',
